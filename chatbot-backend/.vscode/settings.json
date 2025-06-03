@@ -2,5 +2,7 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/a6b70dfa-d9bd-4d10-8fdd-855bbc03a31a/resourceGroups/botnpartner/providers/Microsoft.Web/sites/bnp-chatbot-backend",
+    "appService.deploySubpath": "."
 }

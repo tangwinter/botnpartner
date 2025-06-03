@@ -7,6 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../8003'))); // Serve static files from 8003 directory
 
 // Deepseek config
 const DEEPSEEK_API_KEY = 'BM7BodPC9CVF8G1J0PD97KCFvcO9Tfdo5NxFEgci6TPjGfkL3EbYJQQJ99BDACYeBjFXJ3w3AAAAACOGGHm2';
@@ -115,11 +116,15 @@ app.post('/chat', async (req, res) => {
     }
 });
 
+// Serve the main page
 app.get('/', (req, res) => {
-    res.send('Chatbot backend is running!');
+    res.sendFile(path.join(__dirname, '../8003/index.html'));
 });
 
-const port = process.env.PORT || 8005;
-app.listen(port, () => {
-    console.log(`Chatbot backend running on port ${port}`);
+const port = process.env.PORT || 3000;
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server running on port ${port}`);
+    console.log(`Website is accessible at:`);
+    console.log(`- http://localhost:${port}`);
+    console.log(`- http://127.0.0.1:${port}`);
 });

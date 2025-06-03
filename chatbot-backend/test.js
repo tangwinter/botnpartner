@@ -23,7 +23,7 @@ app.get('/health', (req, res) => {
     });
 });
 
-const port = process.env.PORT || 8005;
+const port = process.env.PORT || 8006;
 app.listen(port, () => {
     console.log(`Test server running on port ${port}`);
     console.log(`Node version: ${process.version}`);

@@ -1,16 +1,16 @@
 {
   "name": "chatbot-backend",
   "version": "1.0.0",
-  "main": "test.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node test.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "express": "^4.18.2",
     "cors": "^2.8.5",
     "xlsx": "^0.18.5",
-    "axios": "^1.6.7"
+    "axios": "^1.6.0"
   },
   "engines": {
     "node": "20.x"
